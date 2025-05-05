@@ -1,6 +1,6 @@
 # Charts
 
-ℹ Using temporarily to created modified paperless-ngx chart
+ℹ Using temporarily to created modified paperless-ngx chart.
 
 [![Artifact Hub](https://img.shields.io/endpoint?url=https://artifacthub.io/badge/repository/gabe565)](https://artifacthub.io/packages/search?repo=gabe565&sort=relevance)
 [![Release Charts](https://github.com/gabe565/charts/actions/workflows/release.yaml/badge.svg)](https://github.com/gabe565/charts/actions/workflows/release.yaml)
