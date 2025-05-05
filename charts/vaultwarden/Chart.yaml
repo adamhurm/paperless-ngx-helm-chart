@@ -16,7 +16,7 @@ sources:
   - https://github.com/dani-garcia/vaultwarden
 dependencies:
   - name: common
-    repository: https://bjw-s.github.io/helm-charts
+    repository: https://bjw-s-labs.github.io/helm-charts
     version: 1.5.1
   - name: mariadb
     version: 20.1.1

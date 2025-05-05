@@ -25,7 +25,7 @@ Kubernetes: `>=1.22.0-0`
 
 | Repository | Name | Version |
 |------------|------|---------|
-| <https://bjw-s.github.io/helm-charts> | common | 2.4.0 |
+| <https://bjw-s-labs.github.io/helm-charts> | common | 2.4.0 |
 
 ## Installing the Chart
 
