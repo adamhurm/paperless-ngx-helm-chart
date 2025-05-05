@@ -1,6 +1,18 @@
 {{/* Append the hardcoded settings */}}
 {{- define "healthchecks.harcodedValues" -}}
 env:
+  {{- if .Values.env.PAPERLESS_APPS }}
+  PAPERLESS_APPS: {{ .Values.env.PAPERLESS_APPS }}
+  {{- end }}
+  
+  {{- if and .Values.env.PAPERLESS_SOCIALACCOUNT_PROVIDERS_SECRET_NAME
+             .Values.env.PAPERLESS_SOCIALACCOUNT_PROVIDERS_SECRET_KEY }}
+  PAPERLESS_SOCIALACCOUNT_PROVIDERS:
+    secretKeyRef:
+      name: {{ .Values.env.PAPERLESS_SOCIALACCOUNT_PROVIDERS_SECRET_NAME }}
+      key: {{ .Values.env.PAPERLESS_SOCIALACCOUNT_PROVIDERS_SECRET_KEY }}
+  {{- end }}
+
   PAPERLESS_TIME_ZONE: {{ .Values.env.TZ }}
   PAPERLESS_PORT: {{ quote .Values.service.main.ports.http.port }}
 

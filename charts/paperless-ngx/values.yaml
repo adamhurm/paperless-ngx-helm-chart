@@ -18,7 +18,12 @@ image:
 env:
   # -- Set the container timezone
   TZ: UTC
-  # PAPERLESS_SECRET_KEY: ""
+
+  # -- Configure paperless-ngx for OpenID Connect
+  # [[ref]](https://docs.paperless-ngx.com/configuration/#PAPERLESS_SOCIALACCOUNT_PROVIDERS)
+  # PAPERLESS_APPS: ""
+  # PAPERLESS_SOCIALACCOUNT_PROVIDERS_SECRET_NAME: secretName
+  # PAPERLESS_SOCIALACCOUNT_PROVIDERS_SECRET_KEY: secretKey
 
 service:
   # -- Configures service settings for the chart.

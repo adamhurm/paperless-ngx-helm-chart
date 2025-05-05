@@ -93,6 +93,9 @@ See each database section in [`values.yaml`](./values.yaml) for configuration ex
 |-----|------|---------|-------------|
 | env | object | See [values.yaml](./values.yaml) | Environment variables [[ref]](https://docs.paperless-ngx.com/configuration/) |
 | env.TZ | string | `"UTC"` | Set the container timezone |
+| env.PAPERLESS_APPS | string | `""` | Comma-separated list of [Django apps](https://docs.paperless-ngx.com/configuration/#PAPERLESS_APPS) to be included |
+| env.PAPERLESS_SOCIALACCOUNT_PROVIDERS_SECRET_NAME | string | `""` | Name of kubernetes secret containing [Django allauth JSON blob](https://docs.paperless-ngx.com/configuration/#PAPERLESS_SOCIALACCOUNT_PROVIDERS) |
+| env.PAPERLESS_SOCIALACCOUNT_PROVIDERS_SECRET_KEY | string | `""` | Name of key for kubernetes secret containing [Django allauth JSON blob](https://docs.paperless-ngx.com/configuration/#PAPERLESS_SOCIALACCOUNT_PROVIDERS) |
 | image.pullPolicy | string | `"IfNotPresent"` | Image pull policy |
 | image.repository | string | `"ghcr.io/paperless-ngx/paperless-ngx"` | Image repository |
 | image.tag | string | `"2.14.7"` | Image tag |
