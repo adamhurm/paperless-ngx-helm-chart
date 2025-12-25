@@ -44,6 +44,7 @@ jobs:
         run: |
           helm repo add bjw-s https://bjw-s-labs.github.io/helm-charts
           helm repo add valkey https://valkey.io/valkey-helm/
+          helm repo add bitnami https://charts.bitnami.com/bitnami
 
       - name: Remove readme images
         run: |
