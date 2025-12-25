@@ -44,12 +44,22 @@ jobs:
         run: |
           helm repo add bitnami https://charts.bitnami.com/bitnami
           helm repo add bjw-s https://bjw-s-labs.github.io/helm-charts
+          helm repo add valkey https://valkey.io/valkey-helm/
 
       - name: Remove readme images
         run: |
           set -x
           for f in charts/**/README.md; do
             sed -i '/^<img .* alt=".* logo"/,+1d' "$f"
+          done
+
+      - name: Update chart dependencies
+        run: |
+          for dir in charts/*; do
+            if [ -f "$dir/Chart.yaml" ]; then
+              echo "Updating dependencies for $(basename "$dir")..."
+              helm dependency update "$dir"
+            fi
           done
 
       - name: Install chart-releaser
