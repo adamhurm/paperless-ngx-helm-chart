@@ -71,7 +71,7 @@ jobs:
         id: package_charts
         run: |
           changed_charts=""
-          for dir in charts/*; do
+          for dir in charts/paperless-ngx*; do
             chart_name="$(basename "$dir")"
             version="$(yq '.version' "$dir/Chart.yaml")"
             if ! git rev-parse "$chart_name-${version#v}" &>/dev/null; then
