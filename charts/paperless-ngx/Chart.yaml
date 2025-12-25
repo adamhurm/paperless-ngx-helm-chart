@@ -4,7 +4,7 @@ description: "A community-supported supercharged version of paperless: scan, ind
 home: https://charts.gabe565.com/charts/paperless-ngx/
 icon: https://raw.githubusercontent.com/paperless-ngx/paperless-ngx/b948750/src-ui/src/assets/logo-notext.svg
 type: application
-version: 0.24.1
+version: 0.25.0
 # renovate datasource=docker depName=ghcr.io/paperless-ngx/paperless-ngx
 appVersion: 2.14.7
 kubeVersion: ">=1.22.0-0"
@@ -24,10 +24,11 @@ dependencies:
     version: 20.1.1
     repository: https://charts.bitnami.com/bitnami
     condition: mariadb.enabled
-  - name: redis
-    repository: https://charts.bitnami.com/bitnami
-    version: 20.7.0
+  - name: valkey
+    repository: https://valkey.io/valkey-helm/
+    version: 0.9.2
     condition: redis.enabled
+    alias: redis
 sources:
   - https://github.com/paperless-ngx/paperless-ngx
 annotations:
